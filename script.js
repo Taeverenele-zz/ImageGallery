@@ -9,7 +9,7 @@ function randNum(){
  }
 
 // Shuffle images function
-function shuffleImages() {
+shuffleImages = () => {
     imagesArray.sort(randNum);
     for (let i = 0; i < imagesArray.length; i++) {
         imagesContainer.appendChild(imagesArray[i]);
@@ -18,7 +18,7 @@ function shuffleImages() {
 
 
 // Search for images function
-function imageSearch() {
+imageSearch = () => {
     input.addEventListener('keyup', function() {
         let inputValue = input.value;
         for (let i = 0; i < images.length; i ++) {
@@ -31,5 +31,5 @@ function imageSearch() {
         }
     })
 }
-shuffleImages()
+shuffleImages();
 imageSearch();
